@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Calcule a compensação do combustível</title>
+    <link class="icone" rel="icon" href="info.png">
+</head>
+    <body>
+    <main class="configurarmain">
+        <img class="foto" src="images.jpg" alt="posto de gasolina">
+        <h1 class="titulo">Qual melhor opção?</h1>
+        <form onsubmit="calcular(event)" class="form">
+            <label>
+                Álcool preço por litro
+            </label>
+            <input 
+            id="alcool"
+            class="input"
+            type="number"
+            placeholder="Digite o valor"
+            min="1"
+            step="0.01"
+            required/>
+            <label>
+                Gasolina preço por litro
+            </label>
+            <input 
+            id="gasolina"
+            class="input"
+            type="number"
+            placeholder="Digite o valor"
+            min="1"
+            step="0.01"
+            required
+            />
+            <input class="botao" type="submit" value="Calcular"/>
+        </form>
+        <section id="content-result" class="result hide">
+            <span id="text-result">Utilize Álcool</span>
+            <span id="alcool-result">Álcool R$3.42</span>
+            <span id="gasolina-result">Gasolina R$5.78</span>
+        </section>
+    </main>
+    <div class="info">
+        <span class="tooltip">Como é feito o cálculo </span> 
+            <a href="calculo.html">
+                <img class="infoimg" src="info.png" alt="Veja como é feito o cálculo"/>
+            </a>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
